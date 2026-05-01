@@ -1,0 +1,265 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[french]{babel}
+\usepackage{geometry}
+\geometry{margin=2cm}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{float}
+\usepackage{parskip}
+\usepackage[]{multicol}
+\title{\textbf{RAPPORT DE SIMULATION STRUCTURELLE - ANSYS}}
+\author{Friedly Woli \\ Étudiant L3 Mécanique Énergétique \\ Université Toulouse III Paul Sabatier}
+\date{06 Mars 2026}
+
+\begin{document}
+	
+	\maketitle
+	\tableofcontents
+	\newpage
+	
+	\section{CONTEXTE DE LA SIMULATION}
+	
+			\subsection{Projet}
+			\begin{itemize}
+				\item \textbf{Contexte projet :} \dotfill % À compléter
+				\item \textbf{Organisation :} \dotfill % Tolosat SUPAERO / TLS'E Racing
+				\item \textbf{Rôle personnel :} \dotfill % Division Structure / Powertrain 
+			\end{itemize}
+
+			\subsection{Objectifs de la simulation}
+
+			
+				
+				
+				\begin{multicols}{2}
+					\textbf{ Objectifs } \\
+					Verifier la resistance et controler la deformation, Identifier la deformation 
+					
+					\columnbreak
+					
+					\textbf{Criteres de validation }\\
+					$\sigma_{VM} < \sigma_{limite}$ \\
+					$u_{max} < u_{admise}$ \\
+					Localisation précise des points chauds \\
+					Variation $< 5\%$ entre maillages \\
+				\end{multicols}
+				
+			
+	\newpage
+	
+	
+	
+	
+	\section{MODÉLISATION}
+	
+					\subsection{Caractéristiques géométriques}
+					\begin{table}[H]
+						\centering
+						\begin{tabular}{lll}
+							\toprule
+							\textbf{Paramètre} & \textbf{Valeur} & \textbf{Unité} \\
+							\midrule
+							Dimensions globales & \dotfill & mm \\
+							Masse de la pièce & \dotfill & kg \\
+							Symétries exploitées & \dotfill & \text{(Oui/Non)} \\
+							Simplifications géométriques & \dotfill & \text{(trous, dépouilles...)} \\
+							\bottomrule
+						\end{tabular}
+						\caption{Caractéristiques géométriques}
+					\end{table}
+			
+					\subsection{Matériau}
+					\begin{table}[H]
+						\centering
+						\begin{tabular}{p{4cm}p{3cm}p{3cm}p{5cm}}
+							\toprule
+							\textbf{Propriété} & \textbf{Valeur} & \textbf{Unité} & \textbf{Source} \\
+							\midrule
+							Module d'Young & \dotfill & GPa & \dotfill \\
+							Coefficient Poisson & \dotfill & - & \dotfill \\
+							Limite élastique & \dotfill & MPa & \dotfill \\
+							Densité & \dotfill & kg/m$^3$ & \dotfill \\
+							Conductivité thermique & \dotfill & W/m.K & \dotfill \\
+							\bottomrule
+						\end{tabular}
+						\caption{Caractéristiques du matériau}
+					\end{table}
+			
+					\subsection{Conditions aux limites}
+					\begin{table}[H]
+						\centering
+						\begin{tabular}{p{3cm}p{4cm}p{5cm}p{4cm}}
+							\toprule
+							\textbf{Type} & \textbf{Emplacement} & \textbf{Valeur} & \textbf{Justification} \\
+							\midrule
+							Encadrement & \dotfill & \dotfill & \dotfill \\
+							Liaison élastique & \dotfill & \dotfill & \dotfill \\
+							Charge ponctuelle & \dotfill & \dotfill & \dotfill \\
+							Pression & \dotfill & \dotfill & \dotfill \\
+							Moment & \dotfill & \dotfill & \dotfill \\
+							\bottomrule
+						\end{tabular}
+						\caption{Conditions aux limites}
+					\end{table}
+			
+			\subsection{ÉTUDE DE CONVERGENCE DU MAILLAGE}
+			
+					\begin{table}[H]
+						\centering
+						\begin{tabular}{ccccc}
+							\toprule
+							\textbf{Maillage} & \textbf{Nbre éléments} & \textbf{$u_{max}$ (mm)} & \textbf{$\sigma_{VM,max}$ (MPa)} & \textbf{Variation (\%)} \\
+							\midrule
+							Grossier & \dotfill & 2.50 & 280 & - \\
+							Intermédiaire & \dotfill & 2.30 & 265 & 8.0 \\
+							Fin & \dotfill & 2.28 & 258 & 1.3 \\
+							Très fin & \dotfill & 2.27 & 257 & 0.4 \\
+							\bottomrule
+						\end{tabular}
+						\caption{Étude de convergence}
+					\end{table}
+					
+					\textbf{Conclusion convergence :} Maillage \textit{Fin} retenu (variation $< 2\%$).
+			
+			
+			
+			
+			
+			
+\newpage
+
+
+
+
+
+
+			\section{RÉSULTATS}
+			
+					\subsection{Déformation totale}
+					\begin{table}[H]
+						\centering
+						\begin{tabular}{lcc}
+							\toprule
+							\textbf{Paramètre} & \textbf{Valeur} & \textbf{Limite admissible} \\
+							\midrule
+							Déformation max & \dotfill mm & \dotfill mm \\
+							Déformation moyenne & \dotfill mm & - \\
+							Zone critique & \dotfill & - \\
+							Facteur de sécurité & \dotfill & $>1.5$ \\
+							\bottomrule
+						\end{tabular}
+						\caption{Résultats déformation}
+					\end{table}
+					
+					\subsection{Contraintes Von Mises}
+					\begin{table}[H]
+						\centering
+						\begin{tabular}{lcc}
+							\toprule
+							\textbf{Paramètre} & \textbf{Valeur} & \textbf{Limite admissible} \\
+							\midrule
+							$\sigma_{VM,max}$ & \dotfill MPa & \dotfill MPa \\
+							$\sigma_{VM,moyenne}$ & \dotfill MPa & - \\
+							Zone critique & \dotfill & - \\
+							Facteur de sécurité & \dotfill & $>1.5$ \\
+							\bottomrule
+						\end{tabular}
+						\caption{Résultats contraintes Von Mises}
+					\end{table}
+					
+					\begin{figure}[H]
+						\centering
+					%	\includegraphics[width=0.45\textwidth]{deformation-total1.jpg}
+					%	\includegraphics[width=0.45\textwidth]{equivalent-stress.jpg}
+						\caption{Déformation totale (gauche) et contraintes Von Mises (droite)}
+					\end{figure}
+			
+			
+			
+			
+			
+			
+	\newpage
+	
+	
+	
+	
+	
+	
+	
+	\section{VALIDATION DES OBJECTIFS}
+	
+					\begin{table}[H]
+						\centering
+						\begin{tabular}{p{3cm}|p{4cm}|p{4cm}|p{3cm}}
+							\toprule
+							\textbf{Objectif} & \textbf{Résultat obtenu} & \textbf{Critère respecté ?} & \textbf{Justification} \\
+							\midrule
+							Résistance & $\sigma_{VM,max} = $ \dotfill MPa & \dotfill & \dotfill \\
+							Déformation & $u_{max} = $ \dotfill mm & \dotfill & \dotfill \\
+							Convergence & Variation $< 2\%$ & \textbf{OUI} & Tableau convergence \\
+							Zones critiques & Identifiées aux coins & \textbf{OUI} & Images jointes \\
+							\bottomrule
+						\end{tabular}
+						\caption{Validation des objectifs}
+					\end{table}
+			
+				\subsection{ANALYSE DES ZONES CRITIQUES}
+				
+						\begin{enumerate}
+							\item \textbf{Coin interne 1 :} $\sigma_{VM} = $ \dotfill MPa $\to$ \dotfill
+							\item \textbf{Coin interne 2 :} $\sigma_{VM} = $ \dotfill MPa $\to$ \dotfill
+							\item \textbf{Coin interne 3 :} $\sigma_{VM} = $ \dotfill MPa $\to$ \dotfill
+							\item \textbf{Bords externes :} Faibles contraintes $\to$ \textbf{Possibilité d'allègement}
+						\end{enumerate}
+				
+				\subsection{RECOMMANDATIONS DE CONCEPTION}
+				
+						\begin{table}[H]
+							\centering
+							\begin{tabular}{p{6cm}p{6cm}}
+								\toprule
+								\textbf{Action corrective} & \textbf{Impact attendu} \\
+								\midrule
+								Renforcer coins internes (raidisseurs) & $\sigma_{VM} ↓ 20-30\%$ \\
+								Augmenter épaisseur locale & $u_{max} ↓ 15\%$ \\
+								Alléger zones bleues & Masse ↓ 10\% sans perte rigidité \\
+								Modifier appui vert & Répartition homogène \\
+								Re-simulation après modifs & Validation finale \\
+								\bottomrule
+							\end{tabular}
+							\caption{Recommandations d'amélioration}
+						\end{table}
+			
+			
+			
+			
+			
+			
+	\newpage
+	
+	
+	
+	
+	
+	
+	\section{CONCLUSION}
+	
+			\begin{itemize}
+				\item \textbf{Simulation validée} : convergence atteinte, objectifs remplis
+				\item \textbf{Zones critiques identifiées} : 3 coins internes à traiter
+				\item \textbf{Facteurs de sécurité} : \dotfill (acceptable / à améliorer)
+				\item \textbf{Prochaines étapes :} \dotfill (modification géométrie / prototype / essais)
+			\end{itemize}
+			
+			\vspace{1cm}
+			\begin{center}
+				\textbf{Rapport validé le : \dotfill}
+			\end{center}
+	
+\end{document}

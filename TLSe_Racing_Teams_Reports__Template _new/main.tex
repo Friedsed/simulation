@@ -1,0 +1,144 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{datetime}
+\usepackage{tocloft}
+\usepackage{siunitx}
+
+
+% Page Setup
+\geometry{margin=1in}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+% Header & Footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Division}
+\fancyhead[R]{TLS’e Racing}
+\fancyfoot[R]{\thepage}
+
+\begin{document}
+
+% Title Page
+\begin{titlepage}
+    \centering
+    \vspace*{1cm}
+        
+        % Logo
+        \includegraphics[width=1\textwidth]{Logo TLS'e.png} % Replace with your actual logo file
+        
+        \vspace{1.5cm}
+        
+        % Title with horizontal rules
+        \hrule
+        \vspace{0.4cm}
+        {\Large\bfseries Title of report \par}
+        \vspace{0.4cm}
+        \hrule
+        
+        \vspace{1.5cm}
+        
+        % Subtitle
+         \Large
+        Division: [Division's Name]\\
+        Author: [Author's Name] \\
+        \vspace{0.5cm}
+        
+        % Season
+        \textbf{Season 2025-2026}
+       
+        \vfill
+        \today
+
+        \normalsize
+         Version: 1.0
+    
+        \vspace{0.5cm}
+        \textit{This document is confidential and intended for internal use only.}
+        
+\end{titlepage}
+
+\newpage
+\tableofcontents
+\newpage
+
+\section{Introduction}
+\label{sec:Introduction}
+\textbf{Objective}: Briefly describe the objective of the task.
+
+\textbf{Scope}: Outline what aspects of the task will be covered in this document.
+
+\section{Rules and Regulations}
+\label{sec:Rules and Regulations}
+State the specific rules to be followed, explain their purpose and origin, and describe how they ensure consistency, compliance, or quality in the project.
+
+\section{Methodology}
+\label{sec:methodology}
+Detail the approach and methods used in this task, including:
+\begin{itemize}
+    \item Tools, algorithms, or hardware used
+    \item Workflow and steps
+    \item Assumptions made
+\end{itemize}
+
+\section{Implementation}
+\label{sec:Implementation}
+Provide the technical details of the implementation. This could include:
+\begin{itemize}
+    \item Software architecture or algorithms developed
+    \item Hardware setup and configurations
+    \item Diagrams or flowcharts (include images if needed)
+\end{itemize}
+
+\section{Results}
+\label{sec:Results}
+Summarize the results of the task. This could include:
+\begin{itemize}
+    \item Data collected
+    \item Performance metrics
+    \item Plots, graphs, or tables
+\end{itemize}
+
+\section{Discussion and Analysis}
+\label{sec:Discussion and Analysis}
+Discuss the significance of the results. Consider:
+\begin{itemize}
+    \item Comparison with expected outcomes
+    \item Challenges encountered
+    \item Possible improvements
+\end{itemize}
+
+\section{Conclusion}
+\label{sec:Conclusion}
+Provide a summary of the task and its impact on the overall project.
+
+\section{Cost and Manufacturing}
+\label{sec:Cost and Manufacturing}
+Present the estimated costs and manufacturing considerations, provide background on the chosen production methods and materials, and explain how these factors influence the project’s feasibility, efficiency, and overall quality.
+
+\section{Future Work}
+\label{sec:Future Work}
+Outline potential next steps, future improvements, or additional research required.
+
+\section{References}
+\label{sec:references}
+Use the following format for citations:
+\begin{itemize}
+    \item \texttt{\textbackslash cite\{authorYear\}} for in-line citations
+    \item List all references in BibTeX format at the end
+\end{itemize}
+
+%\bibliographystyle{plain}
+%\bibliography{references}
+
+\end{document}
+
+% Note that this report must be submitted with each part and assembly you do.
+% The report and part/assembly CAD must be submitted to the scrum with an excel sheet of the Cost and Manufacturing of the part/assembly.
+% Each part designed must have its own CBOM.
+% Each assembly made must have its own DBOM.

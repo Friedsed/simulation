@@ -82,7 +82,7 @@ This section presents the finite element analysis (FEA) of a battery container p
 
 \vspace{2cm}
 
-\section{\textcolor{red}{Rules and Regulations}}
+\section{\textcolor{red}{Rules and Regulations from formula student 2025 rules }}
 \label{sec:Rules and Regulations}
 
 %--------------------------------------------------
@@ -208,7 +208,7 @@ If metallic materials are used, the following minimum thicknesses must be respec
 		\begin{figure}[H]
 			\centering
 		%	\includegraphics[width=0.7\textwidth]{Aluminum.png}
-			\caption{Material properties of aluminum}
+		%	\caption{Material properties of aluminum}
 			\label{fig:material}
 		\end{figure}
 		
@@ -221,8 +221,8 @@ If metallic materials are used, the following minimum thicknesses must be respec
 		\begin{figure}[H]
 			\centering
 		%	\includegraphics[width=0.7\textwidth]{boxes-material.png}
-			\caption{Material properties of aluminum}
-			\label{fig:material}
+		%	\caption{Material properties of aluminum}
+		%	\label{fig:material}
 		\end{figure}
 	
 	
@@ -247,8 +247,8 @@ If metallic materials are used, the following minimum thicknesses must be respec
 		\begin{figure}[H]
 			\centering
 			%\includegraphics[width=0.7\textwidth]{pressure_on_bottom_surface.png}
-			\caption{Connection between module and container}
-			\label{fig:pressure}
+		%	\caption{Connection between module and container}
+		%	\label{fig:pressure}
 		\end{figure}
 		
 	
@@ -272,7 +272,7 @@ If metallic materials are used, the following minimum thicknesses must be respec
 		\begin{figure}[H]
 			\centering
 			%\includegraphics[width=0.7\textwidth]{pressure_on_bottom_surface.png}
-			\caption{Load transfer to the bottom surface}
+		%	\caption{Load transfer to the bottom surface}
 			\label{fig:pressure}
 		\end{figure}
 		
@@ -357,7 +357,7 @@ For acceleration along the x-direction, deformation occurs primarily on the late
 
 \begin{figure}[H]
 	\centering
-%	\includegraphics[width=0.7\textwidth]{Total_deformation.png}
+	\includegraphics[width=0.7\textwidth]{Total_deformation.png}
 	\caption{Total deformation}
 	\label{fig:deformation}
 \end{figure}
@@ -369,7 +369,7 @@ This is a useful plot because it shows the deformation along the X axis, not jus
 
 \begin{figure}[H]
 	\centering
-%	\includegraphics[width=0.7\textwidth]{directionnal_deformation.png}
+	\includegraphics[width=0.7\textwidth]{directionnal_deformation.png}
 	\caption{Directional deformation}
 	\label{fig:dir_deformation}
 \end{figure}
@@ -381,7 +381,7 @@ Because the peak stress is only around 0.37 MPa and the fact that the material i
 
 \begin{figure}[H]
 	\centering
-%	\includegraphics[width=0.7\textwidth]{equivalent_stress.png}
+	\includegraphics[width=0.7\textwidth]{equivalent_stress.png}
 	\caption{Equivalent (Von Mises) stress}
 	\label{fig:stress}
 \end{figure}
@@ -403,7 +403,7 @@ Because the peak stress is only around 0.37 MPa and the fact that the material i
 \label{sec:Discussion and Analysis}
 Discuss the significance of the results. Consider:
 \begin{itemize}
-    \item Comparison with expected outcomes
+    \item Are we obliged to simulate the bolts in the contact between the bottom surface and the module?
     \item Challenges encountered
     \item Possible improvements
 \end{itemize}
@@ -433,21 +433,11 @@ The overall results are good since the deformations are very low. The results al
 
 
 
-\section{Cost and Manufacturing}
-\label{sec:Cost and Manufacturing}
-Present the estimated costs and manufacturing considerations, provide background on the chosen production methods and materials, and explain how these factors influence the project’s feasibility, efficiency, and overall quality.
-
-\section{Future Work}
+\section{\textcolor{red} {Future Work}}
 \label{sec:Future Work}
-Outline potential next steps, future improvements, or additional research required.
+Change the container design to simulate the actual contact between the module and the bottom surface. The part of the module that will be in contact with the container’s bottom surface consists of two thin, wide surfaces, which can be modeled as two lines representing the contact between the module and the bottom surface.
 
-\section{References}
-\label{sec:references}
-Use the following format for citations:
-\begin{itemize}
-    \item \texttt{\textbackslash cite\{authorYear\}} for in-line citations
-    \item List all references in BibTeX format at the end
-\end{itemize}
+Also, integrate the container into the vehicle model and run a realistic simulation with the car to observe the behavior and see what happens.
 
 %\bibliographystyle{plain}
 %\bibliography{references}

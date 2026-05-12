@@ -1,5 +1,5 @@
 \contentsline {section}{\numberline {1}\textcolor {red}{Introduction}}{2}{}%
-\contentsline {section}{\numberline {2}\textcolor {red}{Rules and Regulations}}{2}{}%
+\contentsline {section}{\numberline {2}\textcolor {red}{Rules and Regulations from formula student 2025 rules }}{2}{}%
 \contentsline {subsection}{\numberline {2.1}Segment and Mass Constraints}{2}{}%
 \contentsline {subsection}{\numberline {2.2}Material Baseline Thicknesses}{2}{}%
 \contentsline {subsection}{\numberline {2.3}Structural Geometry Rules}{3}{}%
@@ -17,10 +17,8 @@
 \contentsline {subsection}{\numberline {4.5}Meshing Strategy}{6}{}%
 \contentsline {section}{\numberline {5} \textcolor {blue}{Results}}{7}{}%
 \contentsline {subsection}{\numberline {5.1}Total Deformation}{7}{}%
-\contentsline {subsection}{\numberline {5.2}Directional Deformation}{7}{}%
+\contentsline {subsection}{\numberline {5.2}Directional Deformation}{8}{}%
 \contentsline {subsection}{\numberline {5.3}Equivalent (Von Mises) Stress}{8}{}%
-\contentsline {section}{\numberline {6} \textcolor {blue}{Discussion and Analysis}}{8}{}%
-\contentsline {section}{\numberline {7}\textcolor {red}{Conclusion}}{8}{}%
-\contentsline {section}{\numberline {8}Cost and Manufacturing}{8}{}%
-\contentsline {section}{\numberline {9}Future Work}{9}{}%
-\contentsline {section}{\numberline {10}References}{9}{}%
+\contentsline {section}{\numberline {6} \textcolor {blue}{Discussion and Analysis}}{9}{}%
+\contentsline {section}{\numberline {7}\textcolor {red}{Conclusion}}{9}{}%
+\contentsline {section}{\numberline {8}\textcolor {red} {Future Work}}{9}{}%
